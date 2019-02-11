@@ -1,3 +1,4 @@
+import time
 """
 Django settings for geektrade project.
 
@@ -22,7 +23,10 @@ env_file = os.path.join(os.path.dirname(__file__), 'local.env')
 if os.path.exists(env_file):
     environ.Env.read_env(str(env_file))
 
-KEY = env('HG_BRASIL_KEY')
+QUOTATION_API_KEY = env('QUOTATION_API_KEY')
+QUOTATION_API_URL = env('QUOTATION_API_URL')
+QUOTATION_REQUEST_URL = QUOTATION_API_URL + QUOTATION_API_KEY
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -50,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'quotations.apps.QuotationsConfig'
 ]
 
 MIDDLEWARE = [
