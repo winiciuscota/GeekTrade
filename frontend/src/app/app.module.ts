@@ -8,10 +8,12 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { QuotationsService } from 'src/services/quotations.service';
+import { QuotationsComponent } from './components/quotations/quotations.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QuotationsComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@ import {
     Validators
 } from "@angular/forms";
 import { environment } from "../environments/environment";
-import urljoin from "urljoin";
+import urljoin from "url-join";
 import { Quotation } from 'src/models/quotations.model';
 
 @Injectable()
@@ -20,7 +20,7 @@ export class QuotationsService {
     endPoint: string;
 
     constructor(protected http: HttpClient) {
-        this.endPoint = urljoin(environment.apiUrl, "quotations");
+        this.endPoint = urljoin(environment.apiUrl, "quotations/");
     }
 
     getQuotations(): Observable<Quotation[]> {
