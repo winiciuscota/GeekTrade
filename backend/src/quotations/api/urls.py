@@ -4,5 +4,6 @@ from .views import QuotationListView
 
 
 urlpatterns = [
-    path('', QuotationListView.as_view(), base_name="test"),
+    path('', QuotationListView.as_view(), name="quotation-list"),
+    path('/', QuotationListView.as_view(), name="quotation-list"),
 ]

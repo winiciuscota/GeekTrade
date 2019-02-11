@@ -32,7 +32,6 @@ def update_quotations():
                 new_quotations.append(new_quotation)
 
             # Add all quotations
-            print("Saving quotations %s")
             Quotation.objects.bulk_create(new_quotations)
         except Exception as e:
             print('%s' % e)
