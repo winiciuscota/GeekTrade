@@ -11,3 +11,8 @@ pytest-django==3.2.1
 
 # Django REST Framework
 djangorestframework==3.8.2
+
+# Requests
+requests==2.21.0
+
+mixer==6.1.3
