@@ -3,5 +3,5 @@ export class Quotation {
     buy: number;
     sell: number;
     variation: number
-    createdOn: Date
+    created_on: Date
 }
